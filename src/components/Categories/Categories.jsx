@@ -7,9 +7,10 @@ const Categories = ({ categories, selectedCategory, onCategoryPress }) => {
         <FlatList
             horizontal
             data={categories}
-            style={{ marginRight: -32 }}
+            keyExtractor={(item) => String(item)}
+            // style={{ marginHorizontal: 32 }}
             showsHorizontalScrollIndicator={false}
-            renderItem={({ item }) => {
+            renderItem={({ item, index }) => {
                 const selected = selectedCategory === item;
 
                 return (
@@ -18,6 +19,7 @@ const Categories = ({ categories, selectedCategory, onCategoryPress }) => {
                         style={[
                             styles.itemContainer,
                             selected ? styles.selectedItemContainer : {},
+                            index === 0 ? { marginLeft: 32 } : {},
                         ]}
                     >
                         <Text

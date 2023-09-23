@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
     },
     itemContainer: {
-        marginVertical: 14,
         marginRight: 17,
+        marginBottom: 14,
     },
 });
 
