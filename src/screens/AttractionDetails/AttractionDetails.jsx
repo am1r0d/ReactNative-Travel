@@ -9,6 +9,7 @@ import {
 } from "react-native";
 
 import styles from "./AttractionDetailsStyle";
+import Title from "../../components/Title/Title";
 
 const AttractionDetails = ({ route, navigation }) => {
     const { item } = route?.params || {};
@@ -70,7 +71,14 @@ const AttractionDetails = ({ route, navigation }) => {
                     ))}
                 </Pressable>
             </ImageBackground>
-            <Text>{item?.name}</Text>
+
+            <View style={styles.headerContainer}>
+                <View style={styles.textContainer}>
+                    <Title style={styles.title} text={item?.name} />
+                    <Text style={styles.city}>{item?.city}</Text>
+                </View>
+                <Title style={styles.title} text={item?.entry_price} />
+            </View>
         </SafeAreaView>
     );
 };

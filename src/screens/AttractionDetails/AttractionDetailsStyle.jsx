@@ -50,5 +50,20 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     },
+    title: {
+        color: colors.black,
+    },
+    city: {
+        fontSize: 20,
+        color: colors.black,
+        fontWeight: "400",
+        marginTop: 8,
+    },
+    headerContainer: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginVertical: 40,
+    },
 });
 export default styles;
