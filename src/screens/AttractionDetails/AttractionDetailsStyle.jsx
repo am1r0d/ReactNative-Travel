@@ -1,24 +1,37 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 import { colors } from "../../constants/color";
+const { height } = Dimensions.get("window");
+
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
+    container: { margin: 32 },
+    mainImage: {
+        width: "100%",
+        height: height / 2,
+        flexDirection: "column",
+        justifyContent: "space-between",
+        alignItems: "center",
     },
-    subtitle: {
-        fontSize: 20,
-        color: colors.black,
-        marginTop: 40,
-        // marginBottom: 18,
-    },
-    row: {
+    header: {
+        width: "100%",
         flexDirection: "row",
-        flexWrap: "wrap",
+        justifyContent: "space-between",
+        alignItems: "center",
     },
-    emptyText: {
-        textAlign: "center",
-        marginTop: 20,
-        fontSize: 15,
-        color: "rgba(0,0,0,0.5)",
+    icon: { width: 36, height: 36, margin: 16 },
+    miniImage: {
+        width: 40,
+        height: 40,
+        margin: 8,
+        borderRadius: 10,
+    },
+    footer: {
+        flexDirection: "row",
+        alignItems: "center",
+        borderRadius: 15,
+        justifyContent: "center",
+        backgroundColor: "rgba(256,256,256,0.35)",
+        margin: 16,
+        paddingHorizontal: 8,
     },
 });
 export default styles;
