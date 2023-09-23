@@ -14,5 +14,11 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         flexWrap: "wrap",
     },
+    emptyText: {
+        textAlign: "center",
+        marginTop: 20,
+        fontSize: 15,
+        color: "rgba(0,0,0,0.5)",
+    },
 });
 export default styles;
