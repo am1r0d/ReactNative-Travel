@@ -10,6 +10,7 @@ import {
 
 import styles from "./AttractionDetailsStyle";
 import Title from "../../components/Title/Title";
+import InfoCard from "../../components/infoCard/infoCard";
 
 const AttractionDetails = ({ route, navigation }) => {
     const { item } = route?.params || {};
@@ -73,12 +74,22 @@ const AttractionDetails = ({ route, navigation }) => {
             </ImageBackground>
 
             <View style={styles.headerContainer}>
-                <View style={styles.textContainer}>
+                <View>
                     <Title style={styles.title} text={item?.name} />
                     <Text style={styles.city}>{item?.city}</Text>
                 </View>
                 <Title style={styles.title} text={item?.entry_price} />
             </View>
+
+            <InfoCard
+                text={item?.address}
+                icon={require("../../assets/location_circle.png")}
+            />
+            <InfoCard
+                text={`OPEN
+${item?.opening_time} - ${item?.closing_time}`}
+                icon={require("../../assets/schedule.png")}
+            />
         </SafeAreaView>
     );
 };
