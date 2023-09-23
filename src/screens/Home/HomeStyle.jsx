@@ -8,8 +8,10 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: colors.black,
         marginTop: 40,
-        // marginVertical: 16,
         marginBottom: 18,
+    },
+    row: {
+        flexDirection: "row",
     },
 });
 export default styles;
