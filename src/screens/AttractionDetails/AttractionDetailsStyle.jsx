@@ -66,7 +66,10 @@ const styles = StyleSheet.create({
         marginVertical: 40,
     },
     map: {
-        width: "100%",
+        // justifyContent: "center",
+        // alignContent: "center",
+        // alignItems: "center",
+        width: "110%",
         height: 200,
         borderRadius: 10,
         paddingBottom: 140,
