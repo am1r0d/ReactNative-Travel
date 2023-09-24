@@ -69,10 +69,17 @@ const styles = StyleSheet.create({
         // justifyContent: "center",
         // alignContent: "center",
         // alignItems: "center",
-        width: "110%",
+        width: "100%",
         height: 200,
         borderRadius: 10,
-        paddingBottom: 140,
+    },
+    mapText: {
+        fontWeight: "bold",
+        fontSize: 16,
+        color: colors.blue1,
+        textAlign: "center",
+        padding: 16,
+        marginBottom: 30,
     },
 });
 export default styles;
