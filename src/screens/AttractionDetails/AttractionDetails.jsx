@@ -5,6 +5,7 @@ import {
     Pressable,
     SafeAreaView,
     ScrollView,
+    Share,
     Text,
     View,
 } from "react-native";
@@ -14,6 +15,7 @@ import Title from "../../components/Title/Title";
 import InfoCard from "../../components/infoCard/infoCard";
 
 import MapView, { Marker } from "react-native-maps";
+import * as Sharing from "expo-sharing";
 
 const AttractionDetails = ({ route, navigation }) => {
     const { item } = route?.params || {};
@@ -46,6 +48,11 @@ ${item?.opening_time} - ${item?.closing_time}`;
     };
 
     //
+    const onShare = () => {
+        Sharing.shareAsync();
+    };
+
+    //
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
@@ -61,7 +68,11 @@ ${item?.opening_time} - ${item?.closing_time}`;
                                 source={require("../../assets/back.png")}
                             />
                         </Pressable>
-                        <Pressable hitSlop={8}>
+
+                        <Pressable
+                            onPress={() => Sharing.shareAsync()}
+                            hitSlop={8}
+                        >
                             <Image
                                 style={styles.icon}
                                 source={require("../../assets/share.png")}
